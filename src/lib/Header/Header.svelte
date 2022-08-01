@@ -36,7 +36,7 @@
 	.WebDev {
 		font-size: 3rem;
 		font-weight: 400;
-		width: 12.5ch;
+		width: 13ch;
 		animation: typing 2s steps(13), blink 0.5s step-end infinite alternate;
 		white-space: nowrap;
 		overflow: hidden;
