@@ -5,6 +5,9 @@
 	import Svelte from '$lib/Icons/Svelte.svelte';
 	import Git from '$lib/Icons/Git.svelte';
 	import Md from '$lib/Icons/Md.svelte';
+	import Nest from '$lib/Icons/Nest.svelte';
+	import Ts from '$lib/Icons/Ts.svelte';
+	import Item from './Item.svelte';
 </script>
 
 <section class="Skills" id="skills">
@@ -12,44 +15,44 @@
 		<div class="Group">
 			<span class="Title">Programming languages</span>
 			<div class="GroupContainer">
-				<div class="Item">
-					<div class="Icon"><Python /></div>
-					<span class="Text">Python</span>
-				</div>
-				<div class="Item">
-					<div class="Icon"><Js /></div>
-					<span class="Text">Js</span>
-				</div>
+				<Item name="Python">
+					<Python />
+				</Item>
+				<Item name="Javascript" learning={true}>
+					<Js />
+				</Item>
+				<Item name="Typescript" learning={true}>
+					<Ts />
+				</Item>
 			</div>
 		</div>
 		<div class="Group">
 			<span class="Title">Frameworks and libraries</span>
 			<div class="GroupContainer">
-				<div class="Item">
-					<div class="Icon"><Django /></div>
-					<span class="Text">Django</span>
-				</div>
-				<div class="Item">
-					<div class="Icon"><Svelte /></div>
-					<span class="Text">Svelte Kit</span>
-				</div>
+				<Item name="Django">
+					<Django />
+				</Item>
+				<Item name="Nest Js" learning={true}>
+					<Nest />
+				</Item>
+				<Item name="Svelte Kit" learning={true}>
+					<Svelte />
+				</Item>
 			</div>
 		</div>
 		<div class="Group">
 			<span class="Title">Other technologies</span>
 			<div class="GroupContainer">
-				<div class="Item">
-					<div class="Icon"><Git /></div>
-					<span class="Text">Git</span>
-				</div>
-				<div class="Item">
-					<div class="Icon"><Md /></div>
-					<span class="Text">Markdown</span>
-				</div>
+				<Item name="Git">
+					<Git />
+				</Item>
+				<Item name="Markdown">
+					<Md />
+				</Item>
 			</div>
 		</div>
+		<a href="https://github.com/Umatriz" class="Btn">My GitHub</a>
 	</div>
-	<a href="https://github.com/Umatriz" class="Btn">My GitHub</a>
 </section>
 
 <style>
@@ -86,6 +89,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: flex-start;
+		gap: 0.5rem;
 	}
 	.GroupContainer::before {
 		content: '';
@@ -96,18 +100,6 @@
 		width: 4px;
 		background-color: #1a132f;
 		border-radius: 5px;
-	}
-	.Item {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.Icon {
-		height: 2rem;
-		width: 2rem;
-	}
-	.Text {
-		font-size: 1.3rem;
 	}
 	.Btn {
 		padding: 0.5rem 5rem;
